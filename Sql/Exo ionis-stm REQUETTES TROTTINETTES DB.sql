@@ -24,6 +24,9 @@ U.nom ,
 U.prenom , 
 L.trottinettes_serial_number,
 L.date_enreg 
+F.cout 
 FROM locations L
 	LEFT JOIN utilisateurs U ON L.utilisateurs_id = utilisateurs.id  
-WHERE MONTH(L.date_enreg) = 5 ;
+	LEFT JOIN factures F ON F.locations_id = L.id  
+WHERE MONTH(L.date_enreg) = 5 
+ORDER BY F.cout DESC;
