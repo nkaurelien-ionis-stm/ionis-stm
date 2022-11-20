@@ -1,0 +1,117 @@
+FONCTIONS_UTILISEES
+  //  Exercice 1  =================================
+VARIABLES
+  nb EST_DU_TYPE NOMBRE
+  nb EST_DU_TYPE NOMBRE
+  code EST_DU_TYPE NOMBRE
+DEBUT_ALGORITHME
+  code PREND_LA_VALEUR round(random()*10)
+  AFFICHER code
+  LIRE nb
+  TANT_QUE (code != nb) FAIRE
+    DEBUT_TANT_QUE
+    SI (nb < code) ALORS
+      DEBUT_SI
+      
+      FIN_SI
+      SINON
+        DEBUT_SINON
+        
+        FIN_SINON
+    LIRE nb
+    FIN_TANT_QUE
+FIN_ALGORITHME
+
+//  Exercice 13 - 4  =================================
+FONCTIONS_UTILISEES
+VARIABLES
+  nb_tentative EST_DU_TYPE NOMBRE
+  nb EST_DU_TYPE NOMBRE
+  tailleCode EST_DU_TYPE NOMBRE
+  code EST_DU_TYPE NOMBRE
+DEBUT_ALGORITHME
+  nb_tentative PREND_LA_VALEUR 3
+  AFFICHER "\nChoisir la taille du code entre 0 et 100"
+  LIRE tailleCode
+  TANT_QUE (tailleCode < 0 OU tailleCode > 100) FAIRE
+    DEBUT_TANT_QUE
+    AFFICHER "\nReessayé, Choisir la taille du code entre 0 et 100"
+    LIRE tailleCode
+    FIN_TANT_QUE
+  code PREND_LA_VALEUR round(random()*tailleCode)
+  AFFICHER code
+  AFFICHER "\nDeviner  le code caché"
+  LIRE nb
+  TANT_QUE (nb_tentative > 1 ET code != nb) FAIRE
+    DEBUT_TANT_QUE
+    nb_tentative PREND_LA_VALEUR nb_tentative - 1
+    AFFICHER "\nVous avez "
+    AFFICHER nb_tentative
+    AFFICHER " tentatives restantes"
+    SI (nb < code) ALORS
+      DEBUT_SI
+      AFFICHER "\nDonner une valeur superieur a "
+      AFFICHER nb
+      FIN_SI
+      SINON
+        DEBUT_SINON
+        AFFICHER "\nDonner une valeur inferieur a "
+        AFFICHER nb
+        FIN_SINON
+    LIRE nb
+    FIN_TANT_QUE
+  SI (nb == code) ALORS
+      DEBUT_SI
+      AFFICHER "\nBien joué"
+      FIN_SI
+      SINON
+        DEBUT_SINON
+        AFFICHER "\nDésolé, vous avez perdu, "
+        AFFICHER "le code a deviné etait"
+        AFFICHER code
+        FIN_SINON
+FIN_ALGORITHME
+
+
+
+
+
+//  Exercice 5  =================================
+FONCTIONS_UTILISEES
+VARIABLES
+  A EST_DU_TYPE NOMBRE
+  B EST_DU_TYPE NOMBRE
+  C EST_DU_TYPE NOMBRE
+  //  new ligne
+  Z EST_DU_TYPE NOMBRE
+DEBUT_ALGORITHME
+  LIRE A
+  LIRE B
+  C PREND_LA_VALEUR 2 * A + B
+  SI (C = 10) ALORS
+    DEBUT_SI
+    A PREND_LA_VALEUR C
+    //  new ligne
+    AFFICHER C
+    FIN_SI
+    SINON 
+      DEBUT_SI
+      Z PREND_LA_VALEUR 2 * C
+      //  new ligne
+      AFFICHER Z
+      FIN_SI
+FIN_ALGORITHME
+
+// Exercice 4
+ALGORITHME permutation
+VARIABLES a , b : Nombres
+DEBUT
+	SAISIR a
+	SAISIR b
+	a <-- a + b
+	b <-- b - a
+	a <-- b - a
+	AFFICHER a
+	AFFICHER b
+FIN
+
