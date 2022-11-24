@@ -13,6 +13,7 @@ def exercice7 () :
     print("Trouver les  nombres  paires consecutifs")
 
     nb = int(input("Entrer un nombre entier <--  "))
+    
 
     while (len(list_nombres_paires) < LIMIT) :
         if (nb % 2 == 0) :
