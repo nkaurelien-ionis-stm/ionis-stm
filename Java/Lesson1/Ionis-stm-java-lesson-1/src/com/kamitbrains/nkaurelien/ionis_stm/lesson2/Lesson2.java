@@ -53,7 +53,6 @@ public class Lesson2 {
             //better
             if (!userCharacters.contains(character)) return false;
 
-
         }
 
         return true;
