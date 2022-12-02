@@ -91,6 +91,7 @@ public class Lesson2 {
     public static void printWordWithoutLetter(String word, List<Character> userCharacter) {
 
         String replacementResult = "";
+
         char replacementCharacter = '_';
 
         for (Character character : userCharacter) {

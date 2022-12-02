@@ -27,6 +27,28 @@ public class Main {
     }
 
     /**
+     * Copy the word while replacing every character not present in userCharacter by underscores "_".
+     * For example if I input "truffade" and the list contains 'f' and 'a' it will print "___ffa__".
+     * Hint: Should I type "word." in my IDE to see all the available functions? Also, I like loop!
+     *
+     * @param word          A word to print
+     * @param userCharacter A list of character
+     */
+    public static String wordWithoutLetter(String word, List<Character> userCharacter) {
+
+        char replacementCharacter = '_';
+
+        for (Character character : userCharacter) {
+
+            word = word.replace(character, replacementCharacter);
+
+        }
+
+        return word;
+
+    }
+
+    /**
      * Print the word while replacing every character not present in userCharacter by underscores "_".
      * For example if I input "truffade" and the list contains 'f' and 'a' it will print "___ffa__".
      * Hint: Should I type "word." in my IDE to see all the available functions? Also, I like loop!
@@ -36,16 +58,7 @@ public class Main {
      */
     public static void printWordWithoutLetter(String word, List<Character> userCharacter) {
 
-        String replacementResult = "";
-        char replacementCharacter = '_';
-
-        for (Character character : userCharacter) {
-
-            replacementResult = word.replace(character, replacementCharacter);
-
-        }
-
-        System.out.println(replacementResult);
+        System.out.println(wordWithoutLetter(word, userCharacter));
 
     }
 
@@ -57,7 +70,7 @@ public class Main {
      */
     public static char askUserForCharacter() {
 
-        String str = "";
+        String str;
 
         do {
 
@@ -130,8 +143,9 @@ public class Main {
 
         // test for all letter in  word
         List<Character> chars = Arrays.asList('a','u','r','e', 'l',  'i', 'e', 'n');
-        test("All letter not found in word with checking in sensitive case", !allLetterFound("Aurelien", chars, true));
+        test("All letter not found in word with checking in sensitive case", !allLetterFound("Aurelien", chars));
         test("All letter found in word without checking in sensitive case", allLetterFound("Aurelien", chars, false));
+        test("After replacement of each user characters 'a','u','r','e', 'l',  'i', 'e', 'n' in word Aurelien  by the  character '_'. You see A_______", wordWithoutLetter("Aurelien", chars).equals("A_______"));
 
 //        List<Character> userList = new ArrayList<>();
 //        userList.add('c'); // To add an element to a list
