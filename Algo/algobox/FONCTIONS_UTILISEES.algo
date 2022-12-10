@@ -1,0 +1,94 @@
+FONCTIONS_UTILISEES
+VARIABLES
+  prixenfrancs EST_DU_TYPE NOMBRE
+  prixeneuros EST_DU_TYPE NOMBRE
+  SOMME EST_DU_TYPE NOMBRE
+DEBUT_ALGORITHME
+  AFFICHER "Donner le prix en francs"
+  prixeneuros PREND_LA_VALEUR prixenfrancs/6.55957
+  AFFICHER "La somme \n"
+  // AFFICHER " "
+  AFFICHERCALCUL prixeneuros
+FIN_ALGORITHME
+
+
+//  Activite 1 : Introduction =================================
+// @see https://www.xm1math.net/algobox/tutoalgobox/page1.html
+
+
+//  Activite 1 -----------------------------
+
+FONCTIONS_UTILISEES
+VARIABLES
+  longueur EST_DU_TYPE NOMBRE
+  largeur EST_DU_TYPE NOMBRE
+  aire EST_DU_TYPE NOMBRE
+DEBUT_ALGORITHME
+  AFFICHER "Calcul de l'aire \n"
+  AFFICHER "Donner la longeur \n"
+  LIRE longeur
+  AFFICHER "Donner la largeur \n"
+  LIRE largeur
+  aire PREND_LA_VALEUR longeur * largeur
+  AFFICHER "Donner l'aire (Longueur * largeur) egale "
+  AFFICHER aire
+FIN_ALGORITHME
+
+//  Activite 2 : Variable et affectation =================================
+// @see https://www.xm1math.net/algobox/tutoalgobox/page2.html
+
+
+
+//  Activite 2.1 -----------------------------
+
+FONCTIONS_UTILISEES
+VARIABLES
+  A EST_DU_TYPE NOMBRE
+  B EST_DU_TYPE NOMBRE
+  C EST_DU_TYPE NOMBRE
+DEBUT_ALGORITHME
+  A PREND_LA_VALEUR A + B
+  B PREND_LA_VALEUR B + A
+  A PREND_LA_VALEUR C
+FIN_ALGORITHME
+
+//  Activite 2.2 -----------------------------
+
+FONCTIONS_UTILISEES
+VARIABLES
+  x EST_DU_TYPE NOMBRE
+  z EST_DU_TYPE NOMBRE
+DEBUT_ALGORITHME
+  AFFICHER "Donner un nbre X"
+  LIRE x
+  z PREND_LA_VALEUR -3 * x + 2
+  AFFICHER "La resultat \n"
+  AFFICHER z
+FIN_ALGORITHME
+
+
+//  Activite 3 : Instruciton conditionnel =================================
+// @see https://www.xm1math.net/algobox/tutoalgobox/page3.html
+
+
+//  Afficher en sortie   si un nbre est pair ou  impair -----------------------------
+
+
+FONCTIONS_UTILISEES
+VARIABLES
+  x EST_DU_TYPE NOMBRE
+  moduloDuNbre EST_DU_TYPE NOMBRE
+DEBUT_ALGORITHME
+  AFFICHER "Je m'appelle nk'umbe Aurelien , je suis en Msc 1 info"
+  AFFICHER "Donner un nbre X"
+  LIRE x
+  moduloDuNbre PREND_LA_VALEUR x%2
+  SI (moduloDuNbre == 0) ALORS
+    DEBUT_SI
+    AFFICHER "Pair"
+    FIN_SI
+    SINON
+      DEBUT_SINON
+      AFFICHER "Impair \n"
+      FIN_SINON
+FIN_ALGORITHME
